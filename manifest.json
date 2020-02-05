@@ -1,14 +1,19 @@
 {
   "manifest_version": 2,
 
-  "name": "NuBank OFX",
-  "description": "Adiciona um botão para exportação do extrato em OFX do NuBank",
+  "name": "ExportUI OFX",
+  "description": "Adiciona um botão para exportação do extrato em OFX",
   "version": "1.0",
-  "icons": { "16": "nubank-ofx-16.png",
-           "48": "nubank-ofx-48.png",
-          "128": "nubank-ofx-128.png" },
+  "permissions": [
+    "tabs"
+  ],
   "content_scripts": [{
-    "matches": ["https://app.nubank.com.br/*"],
-    "js": ["jquery-3.0.0.min.js", "extrato-nubank.js"]
+    "matches": [
+      "https://pejota.neon.com.br/saldo*"
+    ],
+    "js": [
+      "lib/moment.js",
+      "content-script.js"
+    ]
   }]
 }
