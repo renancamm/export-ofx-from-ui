@@ -4,9 +4,6 @@
   "name": "Export OFX from UI",
   "description": "Adiciona um botão para exportação do extrato em OFX",
   "version": "1.0",
-  "permissions": [
-    "tabs"
-  ],
   "content_scripts": [{
     "matches": [
       "https://pejota.neon.com.br/saldo*"
